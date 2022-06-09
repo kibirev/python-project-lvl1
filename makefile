@@ -6,3 +6,6 @@ env-prepare:
 
 install:
     poetry install
+
+start:
+    poetry run brain-games
