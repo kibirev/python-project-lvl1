@@ -10,4 +10,4 @@ include/
 **/lib64
 pyvenv.cfg
 poetry.lock
-
+brain_games/scripts/__pycache__/
