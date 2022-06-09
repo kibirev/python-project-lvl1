@@ -2,3 +2,10 @@
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/python-project-lvl1.iml
 /.idea/vcs.xml
+/shelf/
+/workspace.xml
+**/bin/
+include/
+**/lib/
+**/lib64
+pyvenv.cfg
