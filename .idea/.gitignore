@@ -1,6 +1,6 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-/bin
-/include
-/lib
+bin/
+include/
+lib/
