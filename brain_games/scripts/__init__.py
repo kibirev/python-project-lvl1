@@ -1,3 +1,3 @@
-from cli import welcome_user
-from brain_even import parity_check
+import cli
+import brain_even
 __all__ = ["welcome_user", "parity_check"]
