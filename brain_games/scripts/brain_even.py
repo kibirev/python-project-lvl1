@@ -13,7 +13,7 @@ def parity_check():
     count = 0
     while count < 3:
         number = randint(0, 100)
-        print(f'Question:{number}')
+        print(f'Question: {number}')
         while True:
             answer = prompt.string('Your answer: ')
             if answer == 'yes':
