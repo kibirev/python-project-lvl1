@@ -8,7 +8,7 @@ def greet():
 
 def main():
     greet()
-    print(welcome_user())
+    print(f'Hello, {welcome_user()}!')
 
 
 if __name__ == '__main__':
