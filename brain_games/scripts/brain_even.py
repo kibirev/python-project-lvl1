@@ -35,7 +35,9 @@ def parity_check():
                     print(f"yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}")
                     break
             else:
-                print("You can write only 'yes' or 'mo'")
+                count = 0
+                print(f"You can write only 'yes' or 'mo'.\nLet's try again, {name}")
+                break
     print(f'Congratulations, {name}!')
 
 
