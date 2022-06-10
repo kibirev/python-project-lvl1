@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from cli import welcome_user
+from brain_even import parity_check
 
 
 def greet():
@@ -8,7 +8,7 @@ def greet():
 
 def main():
     greet()
-    print(f'Hello, {welcome_user()}!')
+    parity_check()
 
 
 if __name__ == '__main__':
