@@ -28,9 +28,10 @@ def calculation():
             num1, num2 = (randint(0, 100), randint(0, 100), )
             if num1 >= num2:
                 result = num1 - num2
+                printing('question', str(num1) + ' - ' + str(num2))
             else:
                 result = num2 - num1
-            printing('question', str(num1) + ' - ' + str(num2))
+                printing('question', str(num2) + ' - ' + str(num1))
             user_answer = printing('answer')
             if result == int(user_answer):
                 printing('correct_answer')
