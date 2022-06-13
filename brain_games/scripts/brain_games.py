@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from brain_even import parity_check
 from brain_calc import calculation
+from brain_gcd import greatest_common_divisor
 import prompt
 
 
@@ -10,12 +11,14 @@ def greet():
 
 def main():
     greet()
-    print('Choose the game!\nPress \"1\": Brain Even\nPress \"2\": Brain Calc')
+    print('Choose the game!\nPress \"1\": Brain Even\nPress \"2\": Brain Calc\nPress \"3\": Brain GSD')
     choice = prompt.string('Your choce: ')
     if choice == '1':
         parity_check()
     elif choice == '2':
         calculation()
+    elif choice == '3':
+        greatest_common_divisor()
     else:
         print('Incorrect input! Restart game, please!')
 

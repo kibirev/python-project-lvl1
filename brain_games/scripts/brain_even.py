@@ -4,13 +4,8 @@ from random import randint
 import prompt
 
 
-def greeting():
-    return welcome_user()
-
-
 def parity_check():
-    name = greeting()
-    print(f"Hello, {name}!\nAnswer \"yes\" if the number is even, otherwise answer \"no\".")
+    name = welcome_user("Answer \"yes\" if the number is even, otherwise answer \"no\".")
     count = 0
     while count < 3:
         number = randint(0, 100)

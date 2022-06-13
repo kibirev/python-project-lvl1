@@ -2,20 +2,18 @@
 import prompt
 
 
-def welcome_user():
-    return prompt.string('May I have your name? ')
+def welcome_user(description_of_game):
+    name = prompt.string('May I have your name? ')
+    print(f"Hello, {name}!\n{description_of_game}")
+    return name
 
 
-def printing(type_cli, expression=None, u_answer=None, u_name=None):
-    if type_cli == 'question':
-        print(f'Question: {expression}')
-    elif type_cli == 'correct_answer':
-        print('Correct!')
-    elif type_cli == 'answer':
-        return prompt.string(f'Your answer: ')
-    elif type_cli == 'congratulation':
-        print(f'Congratulations, {expression}!')
-    elif type_cli == 'game_over':
-        print(f"'{u_answer}' is wrong answer ;(. Correct answer was '{expression}'.\nLet's try again, {u_name}!")
-    else:
-        print('Unknown type answer!')
+def printing_question_and_answer(arg1, arg2, char=''):
+    print(str(arg1) + char + str(arg2))
+    return prompt.string(f'Your answer: ')
+
+
+def counting_correct_answer(count):
+    print('Correct!')
+    count += 1
+    return count
