@@ -1,35 +1,30 @@
 #!/usr/bin/env python
-from .cli import welcome_user, counting, is_mistake
+from .cli import welcome_user, checking_win
 from random import randint
 import prompt
+
+
+def checking(name, correct_answer, count_correct):
+    player_answer = prompt.string('Your answer: ')
+    if player_answer == 'yes':
+        return checking_win(name, 'yes', correct_answer, count_correct)
+    else:
+        return checking_win(name, 'no', correct_answer, count_correct)
 
 
 def parity_check():
     string = "Answer \"yes\" if the number is even, otherwise answer \"no\"."
     name = welcome_user(string)
-    correct_answer = 0
+    count_correct = 0
     while True:
         number = randint(0, 100)
         print(f'Question: {number}')
-        player_answer = prompt.string('Your answer: ')
-        if player_answer == 'yes':
-            if number % 2 == 0:
-                correct_answer = counting(correct_answer)
-                if correct_answer == 3:
-                    print(f'Congratulations, {name}!')
-                    break
-            else:
-                is_mistake(name, player_answer, 'no')
-                break
+        if number % 2 == 0:
+            count_correct = checking(name, 'yes', count_correct)
         else:
-            if number % 2 == 1:
-                correct_answer = counting(correct_answer)
-                if correct_answer == 3:
-                    print(f'Congratulations, {name}!')
-                    break
-            else:
-                is_mistake(name, player_answer, 'yes')
-                break
+            count_correct = checking(name, 'no', count_correct)
+        if count_correct == 3 or count_correct == 0:
+            break
 
 
 def main():

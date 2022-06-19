@@ -10,7 +10,7 @@ def welcome_user(description_of_game):
 
 def printing(arg1, arg2, char=''):
     print(f'Question: {str(arg1)}{char}{str(arg2)}')
-    return prompt.string(f'Your answer: ')
+    return prompt.string('Your answer: ')
 
 
 def counting(count):
@@ -19,14 +19,14 @@ def counting(count):
     return count
 
 
-def is_mistake(user_name,user_answer, right_answer):
+def is_mistake(user_name, user_answer, right_answer):
     string = "' is wrong answer ;(. Correct answer was '"
     print(f"'{user_answer}{string}{right_answer}'.")
     print(f"Let's try again, {user_name}!")
 
 
 def checking_win(name, player_ans, correct_ans, count_ans):
-    if int(player_ans) == correct_ans:
+    if player_ans == correct_ans:
         count_correct_answer = counting(int(count_ans))
         if count_correct_answer == 3:
             print(f'Congratulations, {name}!')
