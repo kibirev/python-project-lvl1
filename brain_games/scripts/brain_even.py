@@ -18,7 +18,7 @@ def parity_check():
                     print(f'Congratulations, {name}!')
                     break
                 else:
-                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'yes'.)\n"
+                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'no'.)\n"
                           f"Let's try again, {name}!")
                     break
         else:
@@ -28,7 +28,7 @@ def parity_check():
                     print(f'Congratulations, {name}!')
                     break
                 else:
-                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'no'.)\n"
+                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'yes'.)\n"
                           f"Let's try again, {name}!")
                     break
 
