@@ -16,8 +16,8 @@ def calculation():
                     print(f'Congratulations, {name}!')
                     break
             else:
-                print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1+num2}'.)\n"
-                      f"Let's try again, {name}!")
+                print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1+num2}'.)\n")
+                print(f"Let's try again, {name}!")
                 break
         elif operation == 1:
             if num1 >= num2:
@@ -28,8 +28,8 @@ def calculation():
                         print(f'Congratulations, {name}!')
                         break
                 else:
-                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1 - num2}'.\n"
-                          f"Let's try again, {name}!")
+                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1 - num2}'.\n")
+                    print(f"Let's try again, {name}!")
                     break
             else:
                 player_answer = printing(str(num2), str(num1), ' - ')
@@ -39,8 +39,8 @@ def calculation():
                         print(f'Congratulations, {name}!')
                         break
                 else:
-                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num2 - num1}'.\n"
-                          f"Let's try again, {name}!")
+                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num2 - num1}'.\n")
+                    print(f"Let's try again, {name}!")
                     break
         elif operation == 2:
             player_answer = printing(str(num1), str(num2), ' * ')
@@ -50,8 +50,8 @@ def calculation():
                     print(f'Congratulations, {name}!')
                     break
             else:
-                print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1*num2}'.\n"
-                      f"Let's try again, {name}!")
+                print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1*num2}'.\n")
+                print(f"Let's try again, {name}!")
                 break
         else:
             pass

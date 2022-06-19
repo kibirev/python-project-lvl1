@@ -24,8 +24,8 @@ def guessing_simple_number():
                 print(f'Congratulations, {name}!')
                 break
         else:
-            print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{is_simple_number}'.\n"
-                  f"Let's try again, {name}!")
+            print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{is_simple_number}'.\n")
+            print(f"Let's try again, {name}!")
             break
 
 
