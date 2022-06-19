@@ -16,7 +16,6 @@ def guessing_simple_number():
         for not_multiple_of_five in temp:
             if not_multiple_of_five == 5 or not_multiple_of_five % 5 != 0:
                 subsequence.append(not_multiple_of_five)
-        print(subsequence)
         player_answer = printing(number, '', '')
         is_simple_number = 'no'
         for index in subsequence:
