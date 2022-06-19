@@ -22,15 +22,15 @@ def guessing_simple_number():
     while True:
         number = randint(0, 100)
         subsequence = generation_list()
-        player_answer = printing(number, '', '')
-        is_simple_number = 'no'
+        player = printing(number, '', '')
+        is_simple = 'no'
         for index in subsequence:
             if number == index:
-                is_simple_number = 'yes'
+                is_simple = 'yes'
                 break
             else:
-                is_simple_number = 'no'
-        count_correct = checking_win(name, player_answer, is_simple_number, count_correct)
+                is_simple = 'no'
+        count_correct = checking_win(name, player, is_simple, count_correct)
         if count_correct == 3 or count_correct == 0:
             break
 
