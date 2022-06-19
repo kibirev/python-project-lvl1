@@ -1,40 +1,36 @@
 #!/usr/bin/env python
-from .cli import welcome_user
+from .cli import welcome_user, counting_correct_answer
 from random import randint
 import prompt
 
 
 def parity_check():
     name = welcome_user("Answer \"yes\" if the number is even, otherwise answer \"no\".")
-    count = 0
-    while count < 3:
+    correct_answer = 0
+    while True:
         number = randint(0, 100)
         print(f'Question: {number}')
-        while True:
-            answer = prompt.string('Your answer: ')
-            if answer == 'yes':
-                if number % 2 == 0:
-                    print('Correct!')
-                    count += 1
+        player_answer = prompt.string('Your answer: ')
+        if player_answer == 'yes':
+            if number % 2 == 0:
+                correct_answer = counting_correct_answer(correct_answer)
+                if correct_answer == 3:
+                    print(f'Congratulations, {name}!')
                     break
                 else:
-                    count = 0
-                    print(f"yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}")
+                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'yes'.)\n"
+                          f"Let's try again, {name}!")
                     break
-            elif answer == 'no':
-                if number % 2 == 1:
-                    print('Correct!')
-                    count += 1
+        else:
+            if number % 2 == 1:
+                correct_answer = counting_correct_answer(correct_answer)
+                if correct_answer == 3:
+                    print(f'Congratulations, {name}!')
                     break
                 else:
-                    count = 0
-                    print(f"yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}")
+                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'no'.)\n"
+                          f"Let's try again, {name}!")
                     break
-            else:
-                count = 0
-                print(f"You can write only 'yes' or 'mo'.\nLet's try again, {name}")
-                break
-    print(f'Congratulations, {name}!')
 
 
 def main():
