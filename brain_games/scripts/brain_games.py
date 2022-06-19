@@ -3,6 +3,7 @@ from brain_even import parity_check
 from brain_calc import calculation
 from brain_gcd import greatest_common_divisor
 from brain_progression import math_progression
+from brain_prime import guessing_simple_number
 import prompt
 
 
@@ -23,6 +24,8 @@ def main():
         greatest_common_divisor()
     elif choice == '4':
         math_progression()
+    elif choice == '5':
+        guessing_simple_number()
     else:
         print('Incorrect input! Restart game, please!')
 
