@@ -7,7 +7,8 @@ def calculation():
     name = welcome_user('What is the result of the expression?')
     correct_answer = 0
     while True:
-        operation, num1, num2 = (randint(0, 2), randint(0, 100), randint(0, 100), )
+        operation = randint(0, 2)
+        num1, num2 = (randint(0, 100), randint(0, 100), )
         if operation == 0:
             player_answer = printing(str(num1), str(num2), ' + ')
             if int(player_answer) == num1 + num2:

@@ -5,7 +5,8 @@ import prompt
 
 
 def parity_check():
-    name = welcome_user("Answer \"yes\" if the number is even, otherwise answer \"no\".")
+    string = "Answer \"yes\" if the number is even, otherwise answer \"no\"."
+    name = welcome_user(string)
     correct_answer = 0
     while True:
         number = randint(0, 100)
