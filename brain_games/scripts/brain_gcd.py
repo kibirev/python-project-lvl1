@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from cli import welcome_user, printing_question_and_answer, counting_correct_answer
+from .cli import welcome_user, printing_question_and_answer, counting_correct_answer
 from random import randint
 from math import gcd
 

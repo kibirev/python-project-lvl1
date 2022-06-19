@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from brain_even import parity_check
-from brain_calc import calculation
-from brain_gcd import greatest_common_divisor
-from brain_progression import math_progression
-from brain_prime import guessing_simple_number
+from .brain_even import parity_check
+from .brain_calc import calculation
+from .brain_gcd import greatest_common_divisor
+from .brain_progression import math_progression
+from .brain_prime import guessing_simple_number
 import prompt
 
 
