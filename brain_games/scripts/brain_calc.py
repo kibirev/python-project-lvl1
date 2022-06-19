@@ -1,57 +1,41 @@
 #!/usr/bin/env python
-from .cli import welcome_user, counting, printing, is_mistake
+from .cli import welcome_user, counting, printing, checking_win
 from random import randint
+
+
+def addition(name, num1, num2, count_correct):
+    player_answer = printing(str(num1), str(num2), ' + ')
+    return checking_win(name, player_answer, num1 + num2, count_correct)
+
+
+def subtraction(name, num1, num2, count_correct):
+    if num1 >= num2:
+        player_answer = printing(str(num1), str(num2), ' - ')
+        return checking_win(name, player_answer, num1 - num2, count_correct)
+    else:
+        player_answer = printing(str(num2), str(num1), ' - ')
+        return checking_win(name, player_answer, num2 - num1, count_correct)
+
+
+def multiplication(name, num1, num2, count_correct):
+    player_answer = printing(str(num1), str(num2), ' * ')
+    return checking_win(name, player_answer, num1 * num2, count_correct)
 
 
 def calculation():
     name = welcome_user('What is the result of the expression?')
-    correct_answer = 0
+    count_correct = 0
     while True:
         operation = randint(0, 2)
         num1, num2 = (randint(0, 100), randint(0, 100), )
         if operation == 0:
-            player_answer = printing(str(num1), str(num2), ' + ')
-            if int(player_answer) == num1 + num2:
-                correct_answer = counting(correct_answer)
-                if correct_answer == 3:
-                    print(f'Congratulations, {name}!')
-                    break
-            else:
-                is_mistake(name, player_answer, num1+num2)
-                break
+            count_correct = addition(name, num1, num2, count_correct)
         elif operation == 1:
-            if num1 >= num2:
-                player_answer = printing(str(num1), str(num2), ' - ')
-                if int(player_answer) == num1 - num2:
-                    correct_answer = counting(correct_answer)
-                    if correct_answer == 3:
-                        print(f'Congratulations, {name}!')
-                        break
-                else:
-                    is_mistake(name, player_answer, num1 - num2)
-                    break
-            else:
-                player_answer = printing(str(num2), str(num1), ' - ')
-                if int(player_answer) == num2 - num1:
-                    correct_answer = counting(correct_answer)
-                    if correct_answer == 3:
-                        print(f'Congratulations, {name}!')
-                        break
-                else:
-                    is_mistake(name, player_answer, num2 - num1)
-                    break
-        elif operation == 2:
-            player_answer = printing(str(num1), str(num2), ' * ')
-            if int(player_answer) == num1 * num2:
-                correct_answer = counting(correct_answer)
-                if correct_answer == 3:
-                    print(f'Congratulations, {name}!')
-                    break
-            else:
-                is_mistake(name, player_answer, num1 * num2)
-                break
+            count_correct = subtraction(name, num1, num2, count_correct)
         else:
-            pass
+            count_correct = multiplication(name, num1, num2, count_correct)
+        if count_correct == 3 or count_correct == 0:
+            break
 
 
 def main():
