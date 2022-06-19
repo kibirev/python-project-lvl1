@@ -9,9 +9,14 @@ def guessing_simple_number():
     count_correct_answer = 0
     while True:
         number = randint(0, 100)
-        subsequence = [2, 3, 5, 7]
+        temp = [2, 3, 5, 7]
         for index in range(2, 32, 1):
-            subsequence.append(subsequence[index] + 6)
+            temp.append(temp[index] + 6)
+        subsequence = []
+        for not_multiple_of_five in temp:
+            if not_multiple_of_five == 5 or not_multiple_of_five % 5 != 0:
+                subsequence.append(not_multiple_of_five)
+        print(subsequence)
         player_answer = printing(number, '', '')
         is_simple_number = 'no'
         for index in subsequence:
