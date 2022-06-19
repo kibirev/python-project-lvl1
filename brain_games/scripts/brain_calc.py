@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, counting, printing
+from .cli import welcome_user, counting, printing, is_mistake
 from random import randint
 
 
@@ -16,8 +16,7 @@ def calculation():
                     print(f'Congratulations, {name}!')
                     break
             else:
-                print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1+num2}'.)\n")
-                print(f"Let's try again, {name}!")
+                is_mistake(name, player_answer, num1+num2)
                 break
         elif operation == 1:
             if num1 >= num2:
@@ -28,8 +27,7 @@ def calculation():
                         print(f'Congratulations, {name}!')
                         break
                 else:
-                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1 - num2}'.\n")
-                    print(f"Let's try again, {name}!")
+                    is_mistake(name, player_answer, num1 - num2)
                     break
             else:
                 player_answer = printing(str(num2), str(num1), ' - ')
@@ -39,8 +37,7 @@ def calculation():
                         print(f'Congratulations, {name}!')
                         break
                 else:
-                    print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num2 - num1}'.\n")
-                    print(f"Let's try again, {name}!")
+                    is_mistake(name, player_answer, num2 - num1)
                     break
         elif operation == 2:
             player_answer = printing(str(num1), str(num2), ' * ')
@@ -50,8 +47,7 @@ def calculation():
                     print(f'Congratulations, {name}!')
                     break
             else:
-                print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{num1*num2}'.\n")
-                print(f"Let's try again, {name}!")
+                is_mistake(name, player_answer, num1 * num2)
                 break
         else:
             pass

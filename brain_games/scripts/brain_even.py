@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, counting
+from .cli import welcome_user, counting, is_mistake
 from random import randint
 import prompt
 
@@ -18,8 +18,7 @@ def parity_check():
                     print(f'Congratulations, {name}!')
                     break
             else:
-                print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'no'.)\n")
-                print(f"Let's try again, {name}!")
+                is_mistake(name, player_answer, 'no')
                 break
         else:
             if number % 2 == 1:
@@ -28,8 +27,7 @@ def parity_check():
                     print(f'Congratulations, {name}!')
                     break
             else:
-                print(f"'{player_answer}' is wrong answer ;(. Correct answer was 'yes'.)\n")
-                print(f"Let's try again, {name}!")
+                is_mistake(name, player_answer, 'yes')
                 break
 
 

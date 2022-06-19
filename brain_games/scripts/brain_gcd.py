@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, printing, counting
+from cli import welcome_user, printing, counting, is_mistake
 from random import randint
 from math import gcd
 
@@ -16,8 +16,7 @@ def greatest_common_divisor():
                 print(f'Congratulations, {name}!')
                 break
         else:
-            print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{gcd(num1, num2)}'.\n")
-            print(f"Let's try again, {name}!")
+            is_mistake(name, player_answer, gcd(num1, num2))
             break
 
 

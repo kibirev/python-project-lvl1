@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, printing, counting
+from .cli import welcome_user, printing, counting, is_mistake
 from random import randint
 
 
@@ -27,8 +27,7 @@ def math_progression():
                 print(f'Congratulations, {name}!')
                 break
         else:
-            print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.\n")
-            print(f"Let's try again, {name}!")
+            is_mistake(name, player_answer, correct_answer)
             break
 
 

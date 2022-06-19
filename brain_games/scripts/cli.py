@@ -17,3 +17,9 @@ def counting(count):
     print('Correct!')
     count += 1
     return count
+
+
+def is_mistake(user_name,user_answer, right_answer):
+    string = "' is wrong answer ;(. Correct answer was '"
+    print(f"'{user_answer}{string}{right_answer}'.")
+    print(f"Let's try again, {user_name}!")

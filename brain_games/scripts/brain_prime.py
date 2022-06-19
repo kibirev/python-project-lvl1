@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, printing, counting
+from .cli import welcome_user, printing, counting, is_mistake
 from random import randint
 
 
@@ -24,8 +24,7 @@ def guessing_simple_number():
                 print(f'Congratulations, {name}!')
                 break
         else:
-            print(f"'{player_answer}' is wrong answer ;(. Correct answer was '{is_simple_number}'.\n")
-            print(f"Let's try again, {name}!")
+            is_mistake(name, player_answer, is_simple_number)
             break
 
 
