@@ -9,7 +9,7 @@ def welcome_user(description_of_game):
 
 
 def printing_question_and_answer(arg1, arg2, char=''):
-    print(f'Question: {str(arg1)} {char} {str(arg2)}')
+    print(f'Question: {str(arg1)}{char}{str(arg2)}')
     return prompt.string(f'Your answer: ')
 
 
