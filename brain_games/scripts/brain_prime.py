@@ -15,7 +15,7 @@ def guessing_simple_number():
         subsequence = []
         for position in temp:
             if position == 5 or position % 5 != 0:
-                if position % 7 != 0:
+                if position == 7 or position % 7 != 0:
                     subsequence.append(position)
         player_answer = printing(number, '', '')
         is_simple_number = 'no'
