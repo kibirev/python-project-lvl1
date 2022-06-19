@@ -43,7 +43,7 @@ def calculation():
                           f"Let's try again, {name}!")
                     break
         elif operation == 2:
-            player_answer = printing_question_and_answer(str(num1), str(num2), ' * ')
+            player_answer = printing_question_and_answer(str(num1), str(num2), '*')
             if int(player_answer) == num1 * num2:
                 correct_answer = counting_correct_answer(correct_answer)
                 if correct_answer == 3:
