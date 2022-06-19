@@ -14,7 +14,8 @@ def greet():
 def main():
     print("Hello, Tirion\nMay I have your name?")
     greet()
-    print("Choose the game!\nPress \"1\": Brain Even\nPress \"2\": Brain Calc\n)")
+    print("Choose the game!")
+    print("Press \"1\": Brain Even\nPress \"2\": Brain Calc\n)")
     print("Press \"3\": Brain GSD\nPress \"4\": Brain Progression\n")
     print("Press \"5\": Brain Prime\n")
     choice = prompt.string('Your choice: ')
