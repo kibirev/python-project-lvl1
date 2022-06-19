@@ -22,7 +22,7 @@ def math_progression():
                 correct = start
                 start += step
         player = printing(string_left, string_right, '..')
-        count_correct = checking_win(name, player, correct, count_correct)
+        count_correct = checking_win(name, int(player), correct, count_correct)
         if count_correct == 3 or count_correct == 0:
             break
 
