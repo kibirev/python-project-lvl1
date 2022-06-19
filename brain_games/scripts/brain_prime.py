@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, printing_question_and_answer, counting_correct_answer
+from .cli import welcome_user, printing, counting
 from random import randint
 
 
@@ -10,7 +10,7 @@ def guessing_simple_number():
         number = randint(0, 100)
         subsequence_simple_number = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,
                                      83, 89, 97]
-        player_answer = printing_question_and_answer(number, '', '')
+        player_answer = printing(number, '', '')
         is_simple_number = 'no'
         for index in subsequence_simple_number:
             if number == index:
@@ -19,7 +19,7 @@ def guessing_simple_number():
             else:
                 is_simple_number = 'no'
         if player_answer == is_simple_number:
-            count_correct_answer = counting_correct_answer(count_correct_answer)
+            count_correct_answer = counting(count_correct_answer)
             if count_correct_answer == 3:
                 print(f'Congratulations, {name}!')
                 break

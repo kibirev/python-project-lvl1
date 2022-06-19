@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, printing_question_and_answer, counting_correct_answer
+from .cli import welcome_user, printing, counting
 from random import randint
 
 
@@ -20,9 +20,9 @@ def math_progression():
             else:
                 correct_answer = start_number
                 start_number += step
-        player_answer = printing_question_and_answer(string_left, string_right, '..')
+        player_answer = printing(string_left, string_right, '..')
         if int(player_answer) == correct_answer:
-            count_correct_answer = counting_correct_answer(count_correct_answer)
+            count_correct_answer = counting(count_correct_answer)
             if count_correct_answer == 3:
                 print(f'Congratulations, {name}!')
                 break

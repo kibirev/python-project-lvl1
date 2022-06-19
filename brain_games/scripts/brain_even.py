@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, counting_correct_answer
+from .cli import welcome_user, counting
 from random import randint
 import prompt
 
@@ -13,7 +13,7 @@ def parity_check():
         player_answer = prompt.string('Your answer: ')
         if player_answer == 'yes':
             if number % 2 == 0:
-                correct_answer = counting_correct_answer(correct_answer)
+                correct_answer = counting(correct_answer)
                 if correct_answer == 3:
                     print(f'Congratulations, {name}!')
                     break
@@ -23,7 +23,7 @@ def parity_check():
                 break
         else:
             if number % 2 == 1:
-                correct_answer = counting_correct_answer(correct_answer)
+                correct_answer = counting(correct_answer)
                 if correct_answer == 3:
                     print(f'Congratulations, {name}!')
                     break
