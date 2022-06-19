@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from .cli import welcome_user, counting, printing, checking_win
+from .cli import welcome_user, printing, checking_win
 from random import randint
 
 
