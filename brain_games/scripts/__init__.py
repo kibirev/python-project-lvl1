@@ -1,5 +1,5 @@
-from .cli import welcome_user, counting, printing, is_mistake
+from .cli import welcome_user, checking_win, printing
 from .brain_even import parity_check
 
 
-__all__ = ["welcome_user", "parity_check", "counting", "printing", "is_mistake"]
+__all__ = ["welcome_user", "parity_check", "checking_win", "printing"]
